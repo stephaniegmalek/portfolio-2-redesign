@@ -25,28 +25,29 @@
   <!-- Add your site or application content here -->
 <!-- Home -->
   <header id="home">
-    <div class="content-wrapper">
-      <div class="hero">
-        <h1>Hey there, I'm <span>Stephanie</span>. I'm a Web Designer &amp; Developer.</h1>
+    <section class="hero-area">
 
-        <a id="home-section">
-          <input type="button" value="View my work">
-        </a>
-      </div>
+      <h1>Hey there, I'm <span>Stephanie</span>. I'm a Web Designer &amp; Developer.</h1>
 
-      <div class="nav-bar">
-        <nav>
+      <a id="home-section">
+        <input type="button" value="View my work">
+      </a>
+
+    </section>
+  </header>
+
+  <section id="nav-bar">
+
+
+    <nav>
           <ul>
             <li><a href="#home-section">Home</a></li>
             <li><a href="#about-section">About</a></li>
             <li><a href="#work-section">Work</a></li>
             <li><a href="#contact-section">Contact</a></li>
           </ul>
-        </nav>
-      </div>
-
-    </div>
-  </header>
+    </nav>
+  </section>
 
   <main>
   <!-- About -->
@@ -110,33 +111,37 @@
 
     <!-- About Me -->
         <section id="about-me">
-          <img src="" alt="profile-img"/>
-
-          <h3>About Me</h3>
-          <p>
-            I'm a Web Designer & Developer in the Greater New York City area.
-            I love designing and creating beautiful websites with intuitive,
-            dynamic user experiences. </br>
-            <a href="#contact-section"><span>Let's create something together!</span></a>
-          </p>
+          <img src="img/about-me-image.png" alt="profile-img"/>
+          <div class="about-me-info">
+            <h3>About Me</h3>
+            <p>
+              I'm a Web Designer & Developer in the Greater New York City area.
+              I love designing and creating beautiful websites with intuitive,
+              dynamic user experiences.
+              <br><br>
+              <a href="#contact-section"><span>Let's create something together!</span></a>
+            </p>
+          </div>
         </section>
 
     <!-- Skill Chart -->
-        <div id="chart-container">
-          <div class="bar cf" data-percent="80%"><span class="label">CSS</span></div>
-          <div class="bar cf" data-percent="85%"><span class="label light">HTML</span></div>
-          <div class="bar cf" data-percent="65%"><span class="label">jQuery</span></div>
-          <div class="bar cf" data-percent="65%"><span class="label light">Javascript</span></div>
-          <div class="bar cf" data-percent="60%"><span class="label">Ruby/Rails</span></div>
-          <div class="bar cf" data-percent="80%"><span class="label light">PHP</span></div>
-          <div class="bar cf" data-percent="60%"><span class="label light">WordPress</span></div>
-          <div class="bar cf" data-percent="75%"><span class="label">UI Design</span></div>
-          <div class="bar cf" data-percent="90%"><span class="label light">Photoshop</span></div>
-          <div class="bar cf" data-percent="85%"><span class="label">Illustrator</span></div></div>
-          <div class="bar cf" data-percent="50%"><span class="label">XD</span></div></div>
-          <div class="bar cf" data-percent="80%"><span class="label">InDesign</span></div></div>
-
+        <div>
+          <div id="chart-container">
+            <div class="bar cf" data-percent="80%"><span class="label">CSS</span></div>
+            <div class="bar cf" data-percent="85%"><span class="label light">HTML</span></div>
+            <div class="bar cf" data-percent="65%"><span class="label">jQuery</span></div>
+            <div class="bar cf" data-percent="65%"><span class="label light">Javascript</span></div>
+            <div class="bar cf" data-percent="60%"><span class="label">Ruby/Rails</span></div>
+            <div class="bar cf" data-percent="80%"><span class="label light">PHP</span></div>
+            <div class="bar cf" data-percent="60%"><span class="label light">WordPress</span></div>
+            <div class="bar cf" data-percent="75%"><span class="label">UI Design</span></div>
+            <div class="bar cf" data-percent="90%"><span class="label light">Photoshop</span></div>
+            <div class="bar cf" data-percent="85%"><span class="label">Illustrator</span></div>
+            <div class="bar cf" data-percent="50%"><span class="label">XD</span></div>
+            <div class="bar cf" data-percent="80%"><span class="label">InDesign</span></div>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -148,28 +153,17 @@
         </a>
 
       <!-- Work Gallery -->
-      <div class="content-wrapper">
-        <div>
-          <article>
-            <img src="" alt="Rogue Pickings"/>
-          </article>
+      <div class="gallery-wrapper">
+          <div id="rogue-pickings"></div>
 
-          <article>
-            <img src="" alt="Unplugged"/>
-          </article>
+          <div id="unplugged"></div>
 
-          <article>
-            <img src="" alt="Accelerate Marketing"/>
-          </article>
+          <div id="dorthy"></div>
 
-          <article>
-            <img src="" alt="The Whole Bean"/>
-          </article>
+          <div id="accelerate"></div>
 
-          <article>
-            <img src="" alt="Dorthy DeLong"/>
-          </article>
-        </div>
+          <div id="whole-bean"></div>
+
       </div>
     </section>
 
@@ -190,10 +184,11 @@
           <textarea name="message" placeholder="Your message..."></textarea>
           <input type="submit" value="Send">
         </form>
+
+        <a href="#home-section"><img src="" alt="back-to-top-img"></a>
+
       </div>
     </section>
-
-    <a href="#home-section"><img src="" alt="back-to-top-img"></a>
 
   </main> <!-- main wrapper -->
 
