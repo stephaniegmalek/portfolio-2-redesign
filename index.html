@@ -3,16 +3,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
+  <title>Stephanie G Malek | Web Designer & Developer</title>
+  <meta name="description" content="Stephanie G Malek's Web Design & Development portfolio site">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Loading icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- FontAwesome CDN version 5.5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -36,18 +41,15 @@
     </section>
   </header>
 
-  <section id="nav-bar">
-
-
-    <nav>
-          <ul>
-            <li><a href="#home-section">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#work-section">Work</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-          </ul>
-    </nav>
-  </section>
+  <div class="topnav" id="myTopnav">
+        <a href="#home-section" class="active">Home</a>
+        <a href="#about-section">About</a>
+        <a href="#work-section">Work</a>
+        <a href="#contact-section">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+  </div>
 
   <main>
   <!-- About -->
@@ -64,6 +66,7 @@
         <!-- Visual Design -->
           <article>
             <p class="fontawesome-icon">
+              <i class="fas fa-paint-brush"></i>
             </p>
             <h3>Visual Design</h3>
             <p>
@@ -79,6 +82,7 @@
             <p class="fontawesome-icon">
             </p>
             <h3>Intuitive</h3>
+              <i class="far fa-lightbulb"></i>
             <p>
               Strive to deliver easy to use and intuitive UX / UI.
             </p>
@@ -87,6 +91,7 @@
         <!-- Dynamic -->
           <article>
             <p class="fontawesome-icon">
+                <i class="fas fa-rocket"></i>
             </p>
             <h3>Dynamic</h3>
             <p>
@@ -99,6 +104,7 @@
         <!-- Responsive -->
           <article>
             <p class="fontawesome-icon">
+              <i class="fas fa-expand-arrows-alt"></i>
             </p>
             <h3>Responsive</h3>
             <p>
@@ -110,6 +116,7 @@
         </section>
 
     <!-- About Me -->
+      <div class="about-info">
         <section id="about-me">
           <img src="img/about-me-image.png" alt="profile-img"/>
           <div class="about-me-info">
@@ -125,23 +132,22 @@
         </section>
 
     <!-- Skill Chart -->
-        <div>
+
           <div id="chart-container">
             <div class="bar cf" data-percent="80%"><span class="label">CSS</span></div>
-            <div class="bar cf" data-percent="85%"><span class="label light">HTML</span></div>
+            <div class="bar cf" data-percent="85%"><span class="label">HTML</span></div>
             <div class="bar cf" data-percent="65%"><span class="label">jQuery</span></div>
-            <div class="bar cf" data-percent="65%"><span class="label light">Javascript</span></div>
+            <div class="bar cf" data-percent="65%"><span class="label">Javascript</span></div>
             <div class="bar cf" data-percent="60%"><span class="label">Ruby/Rails</span></div>
-            <div class="bar cf" data-percent="80%"><span class="label light">PHP</span></div>
-            <div class="bar cf" data-percent="60%"><span class="label light">WordPress</span></div>
+            <div class="bar cf" data-percent="80%"><span class="label">PHP</span></div>
+            <div class="bar cf" data-percent="60%"><span class="label">WordPress</span></div>
             <div class="bar cf" data-percent="75%"><span class="label">UI Design</span></div>
-            <div class="bar cf" data-percent="90%"><span class="label light">Photoshop</span></div>
+            <div class="bar cf" data-percent="90%"><span class="label">Photoshop</span></div>
             <div class="bar cf" data-percent="85%"><span class="label">Illustrator</span></div>
             <div class="bar cf" data-percent="50%"><span class="label">XD</span></div>
             <div class="bar cf" data-percent="80%"><span class="label">InDesign</span></div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -152,19 +158,82 @@
           <h2>Work</h2>
         </a>
 
-      <!-- Work Gallery -->
-      <div class="gallery-wrapper">
-          <div id="rogue-pickings"></div>
-
-          <div id="unplugged"></div>
-
-          <div id="dorthy"></div>
-
-          <div id="accelerate"></div>
-
-          <div id="whole-bean"></div>
-
+      <!-- Work Gallery to be used to open the lightbox -->
+      <div class="work-gallery">
+        <div class="gallery-row">
+          <div class="gallery-column">
+            <img src="img/rogue-pickings-thumb.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          </div>
+          <div class="gallery-column">
+            <img src="img/unplugged-thumb.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+          </div>
+          <div class="gallery-column">
+            <img src="img/dorothy-thumb.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+          </div>
+          <div class="gallery-column">
+            <img src="img/accelerate-thumb.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+          </div>
+          <div class="gallery-column">
+            <img src="img/whole-bean-thumb.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+          </div>
+        </div>
       </div>
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 5</div>
+            <img src="img/rogue-pickings-full.png" style="width:100%">
+            <div class="text">
+              <div class="bold">Rogue Pickings</div>
+              <span class="highlight">Static HTML & CSS</span>
+            </div>
+            <div class="learn-button" id="rogue">LEARN MORE</div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 5</div>
+            <img src="img/unplugged-full.png" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 5</div>
+            <img src="img/dorothy-full.png" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 5</div>
+            <img src="img/accelerate-full.png" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 5</div>
+            <img src="img/whole-bean-full.png" style="width:100%">
+          </div>
+
+          <!-- Next/Previous Controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption Text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail Image Controls -->
+          <div class="thumb-column">
+            <img class="demo" src="img/rogue-pickings-thumb.png" onclick="currentSlide(1)" alt="Rogue Pickings">
+          </div>
+          <div class="thumb-column">
+            <img class="demo" src="img/unplugged-thumb.png" onclick="currentSlide(2)" alt="Unplugged">
+          </div>
+          <div class="thumb-column">
+            <img class="demo" src="img/dorothy-thumb.png" onclick="currentSlide(3)" alt="Dorthy DeLang Portfolio Site">
+          </div>
+          <div class="thumb-column">
+            <img class="demo" src="img/accelerate-thumb.png" onclick="currentSlide(4)" alt="Accelerate">
+          </div>
+          <div class="thumb-column">
+            <img class="demo" src="img/whole-bean-thumb.png" onclick="currentSlide(5)" alt="The Whole Bean">
+          </div>
     </section>
 
   <!-- Contact -->
@@ -185,7 +254,11 @@
           <input type="submit" value="Send">
         </form>
 
-        <a href="#home-section"><img src="" alt="back-to-top-img"></a>
+        <p>
+          <a href="#home-section">
+            <i class="fas fa-angle-double-up"></i>
+          </a>
+        </p>
 
       </div>
     </section>

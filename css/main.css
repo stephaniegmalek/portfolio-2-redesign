@@ -131,19 +131,30 @@ textarea {
     align-items: center;
     flex-flow: row wrap;
   }
-  .nav-bar nav {
-    /*width: 60%;
-    font-size: 1.125em;*/
-    text-transform: uppercase;
-    display: flex;
-    /*justify-content: flex-start;*/
+  /* ----- Top Nav Styles -----*/
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
   }
-  .nav-bar ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
   }
-
+  .topnav a:hover,
+  .topnav a.active {
+    color: #C962FF;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  #about-me img {
+    border-radius: 50%;
+  }
 /* -------------------- Mobile Styles -------------------- */
 
 header,
@@ -168,6 +179,27 @@ footer {
   text-align: center;
   color: #FFFFFF;
 }
+/* Top Nav Styles */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 span {
   color: #C962FF;
 }
@@ -176,53 +208,12 @@ span {
   width: 85%;
   margin: 30px auto;
 }
-#nav-bar {
-  background-color: #060606;
-  border-bottom: 7px solid #C962FF;
-}
-#nav-bar nav {
-  width: 40%;
-  /*font-size: 1.125em;
-  font-weight: 700;*/
-  text-transform: uppercase;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-#nav-bar nav ul {
-  width: 100%;
-  padding: 0 0 0 30px;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#nav-bar a {
-  text-decoration: none;
-}
-/* unvisited link */
-#nav-bar a:link {
-  color: white;
-}
-/* visited link */
-#nav-bar a:visited {
-  color: white;
-}
-/* mouse over link */
-#nav-bar a:hover {
-  color: #C962FF;
-}
-/* selected link */
-#nav-bar a:active {
-  color: #C962FF;
-}
 #about h2,
 #about h3 {
   text-align: center;
 }
 .featured-skills p {
   text-align: center;
-  /*margin: 0;*/
 }
 #about-me {
   text-align: center;
@@ -240,29 +231,22 @@ span {
    -webkit-transform: translate3d(0,0,0);
  	 clear: both;
  }
- div:nth-of-type(2n) {
-   background: #EEEEEE;
-   /*background:lighten(#7E2DA9, 10% );*/
- }
  span.label {
 		font-size: .75em;
-		padding: 1em;
+		padding: .5em;
 		background: #C962FF;
     color: #fff;
-		width: 8em;
+		width: 7em;
 		display: inline-block;
 		position: relative;
 		z-index: 2;
 		font-weight: bold;
 		/*font-family: $fontSans;*/
-}
-&.light {
- 	 	    background:lighten(#C962FF , 10% );
-}
-span.count {
+  }
+  span.count {
       color: #fff;
-}
-.count {
+  }
+  .count {
     position: absolute;
     right: .25em;
     top: .75em;
@@ -270,7 +254,7 @@ span.count {
     font-size: .75em;
     font-weight: bold;
     /*font-family: $fontSans;*/
-}
+  }
 
 /* -----Work Section -----*/
 #work {
@@ -278,42 +262,133 @@ span.count {
   background-color: #F2F2F2;
 }
 #work .content-wrapper {
-  text-align: center;
   margin: 40px auto 80px auto;
 }
-.gallery-wrapper {
-  margin: 40px auto;
+#work-section h2 {
+  text-align: center;
 }
-#rogue-pickings {
-  background: url(../img/rogue-pickings-img.png);
-  background-size: cover;
-  background-position: center;
-  min-height: 239px;
+.work-gallery {
+  display: flex;
 }
-#unplugged {
-  background: url("../img/unplugged-img.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 239px;
+.gallery-row {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#accelerate {
-  background: url("../img/accelerate-img.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 239px;
+.gallery-row > .gallery-column {
+  padding: 8px;
 }
-#whole-bean {
-  background: url("../img/whole-bean-img.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 239px;
+.gallery-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
-#dorthy {
-  background: url("../img/dorothy-portfolio-img.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 239px;
+.gallery-column img {
+  width: 98%;
 }
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 700px;
+}
+/* Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*Hide the slides by default */
+.mySlides {
+  display: none;
+}
+/* Next and prvious buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #C962FF;
+  font-weight: bold;
+  font-size: 3em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit of see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text ( 1 / 5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+/*Modal gallery thumbnails */
+img.demo {
+  opacity: 0.6;
+  float: left;
+  width: 20%;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  transition: 0.3s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*----- Contact Form -----*/
 #contact {
   text-align: center;
   margin-bottom: 0;
@@ -440,32 +515,7 @@ footer .content-wrapper {
     align-items: center;
     flex-flow: row wrap;
   }
-  .gallery-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  #rogue-pickings {
-    width: 50%;
-    min-height: 248px;
-  }
-  #unplugged {
-    width: 50%;
-    min-height: 248px;
-  }
-  #accelerate {
-    width: 50%;
-    min-height: 248px;
-  }
-  #whole-bean {
-    width: 50%;
-    min-height: 248px;
-  }
-  #dorthy {
-    width: 50%;
-    min-height: 248px;
-  }
+
   form {
     width: 50%;
     margin: 0 auto;
@@ -483,6 +533,9 @@ footer .content-wrapper {
   #nav-bar nav {
     padding: 0 0 0 150px;
   }
+  .about-info {
+    display: flex;
+  }
   .featured-skills article {
     width: 20%;
     height: 265px;
@@ -493,20 +546,37 @@ footer .content-wrapper {
     flex-flow: row wrap;
   }
   #about-me {
+    width: 45%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
   .about-me-info {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   #chart-container {
-    margin: 0;
+    width: 45%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .gallery-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .gallery-column {
+    width: 50%;
   }
 }
 
