@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>The Whole Bean</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,13 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/bean-main.css">
+
+  <!-- FontAwesome CDN version 5.5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -23,12 +29,194 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- Header -->
+  <header>
+    <div class="content-wrapper">
+      <!-- logo -->
+      <figure id="whole-bean-logo">
+        <img src="img/whole-bean-heading.png" alt="The Whole Bean logo">
+      </figure>
+
+      <h1>Join us for our grand opening event!</h1>
+      <h3>
+        Come celebrate with us and get a free cup of coffee
+        and the chance to win free coffee for a year.
+        <br><br>
+        <span class="bold">123 Front St | Decemember 6-8th</span>
+      </h3>
+    </div>
+  </header>
+
+  <main>
+  <!-- Slideshow -->
+    <section>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/hero-1.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/hero-2.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/hero-3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+
+        <!-- The dots/circles -->
+        <div style="text-align:center" class="bg">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+  <!-- CTA -->
+    <section id="cta">
+      <div class="content-wrapper">
+        <h2>
+          <span class="bold">Let's be pen pals!</span><br>
+          Get a free housemade scone when you join our mailing list.
+        </h2>
+
+        <form>
+          <input class="half" type="text" name="name" value="First Name">
+          <input class="half" type="text" name="name" value="Last Name">
+          <input class="full" type="email" name="email" value="Email Address">
+          <button class="full submit" type="submit">I LOVE FREE STUFF! <i class="far fa-paper-plane"></i></button>
+        </form>
+
+        <p>
+          <span class="bold italic">We love our customers and hate spam. We promise to keep your info safe!</span>
+        </p>
+      </div>
+    </section>
+
+  <!-- Menu and Product Offerings -->
+    <section id="offerings">
+      <div class="content-wrapper">
+        <h2>What we bring to the table<br>
+        Both at the shop and at home.</h2>
+
+        <div class="menu-products">
+          <div class="menu">
+            <figure>
+              <img src="img/menu-icon.png" alt="menu icon">
+            </figure>
+            <h3>Menu</h3>
+            <p>
+              We serve a variety of delicious coffee, espresso drinks, and teas
+              along with simple food offerings - all homemade!
+            </p>
+          </div>
+
+          <div class="products">
+            <figure>
+              <img src="img/product-icon.png" alt="product icon">
+            </figure>
+            <h3>Products</h3>
+            <p>
+              Our signature, house-blend coffee and teas are available by the cup
+              or bag!<br><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Reviews and Testimonials -->
+    <section id="review-section">
+      <div class="content-wrapper">
+        <h2>Serving the community we love!</h2>
+        <h3>Hear some of the buzz The Whole Bean is already generating.</h3>
+
+        <div class="reviews-section">
+          <div class="review">
+            <p><span class="italic">
+              "Absolutely awesome coffee shop. Very cozy atmosphere. Great staff.
+              Coffee and food are awesome. Great place to hangout and talk or just
+              get work done!"
+            </span></p>
+          </div>
+
+          <div class="review">
+            <p><span class="italic">
+              "Best coffee house in the neighborhood! If you appreciate real barista
+              -style lattes, this is the place. Delicious drinks, hot or cold. Definetely
+              will be in often, whether to read, relax, meet friends or even just
+              some quality alone time!"
+            </span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact -->
+  <footer>
+    <div class="content-wrapper">
+      <h2>Where to find us!</h2>
+      <h3>In the shop &amp; online</h3>
+
+      <div class="contact-section">
+        <div class="contact-info">
+          <address>
+            <h3>Shop Address</h3>
+            <p>
+              123 Front St <br>
+              Chappaqua, NY <br>
+              (510) 555-5555 <br>
+              hello@wholebean.com
+            </p>
+          </address>
+        </div>
+
+        <div class="contact-info">
+          <h3>Find us online</h3>
+          <div class="social-icons">
+            <p>
+              <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </p>
+            <p>
+              <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p>The Whole Bean | Copyright 2019</p>
+
+    </div>
+  </footer>
+
+  <!-- End of Site Content -->
   <script src="../js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="../js/plugins.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/bean-main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

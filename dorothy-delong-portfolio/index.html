@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dorothy DeLong</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/dorothy-main.css">
+
+  <!-- Loading Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome CDN version 5.5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Site Content Begins -->
+
+  <!-- Header -->
+  <header>
+    <div class="content-wrapper">
+      <div class="heading-logo">
+        <figure class="logo">
+          <a href="#">
+            <img src="img/dorothy-logo.png" alt="Dorothy DeLong logo">
+          </a>
+        </figure>
+
+        <h1>Dorothy DeLong</h1>
+      </div>
+        <nav>
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#photography">PHOTOGRAPHY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <figure class="hero-area">
+          <div class="hero-img">
+            <p class="hero-quote">"I capture the realness behind feminism, no filter."</p>
+          </div>
+          <p class="titles">
+            <span class="bold">Smile</span> | San Fransisco, California | 8/4/2017
+          </p>
+        </figure>
+    </div>
+  </header>
+
+  <main>
+
+
+    <!-- ABOUT -->
+      <section>
+        <figure class="headshot">
+          <img src="img/dorothy-headshot.png" alt="Dorothy DeLong Headshot">
+        </figure>
+
+        <div class="about-text">
+          <a id="about"><h2 id="artist-statement">ARTIST STATEMENT</h2></a>
+          <p>
+            My work focuses on candid photographs taken on location at events
+            for women's rights, places where women are owning their space, and
+            fleeting encounters on the streets. My work engulfs the viewer in real
+            moments of strength, vulnerability, and solidarity.
+            <br><br>
+            <span class="quote">- Dorothy DeLong</span>
+          </p>
+        </div>
+      </section>
+
+    <!-- PHOTOGRAPHY -->
+      <section>
+        <a id="photography"><h2>PHOTOGRAPHY</h2></a>
+        <!-- Images used in Gallery / to open the lightbox -->
+        <div class="gallery">
+          <!--Img 1 -->
+          <div class="photo">
+            <img src="img/moment-photo.png" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Moment">
+            <p class="titles">
+              <span class="bold">Moment</span> | FemRock Fest - Austin, Texas | 7/17/2018
+            </p>
+          </div>
+
+
+          <!--Img 2 -->
+          <div class="photo">
+            <img src="img/father-photo.png" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Father">
+            <p class="titles">
+              <span class="bold">Father</span> | Denver, Colorado | 6/25/2018
+            </p>
+          </div>
+
+          <!--Img 3 -->
+          <div class="photo">
+            <img src="img/flag-photo.png" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Flag">
+            <p class="titles">
+              <span class="bold">Flag</span> | LGBTQIA March - Washington DC | 11/12/2017
+            </p>
+          </div>
+
+          <!--Img 4 -->
+          <div class="photo">
+            <img src="img/haircut-photo.png" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Haircut">
+            <p class="titles">
+              <span class="bold">Haircut</span> | NYC | 3/31/2018
+            </p>
+          </div>
+
+          <!--Img 5 -->
+          <div class="photo">
+            <img src="img/flex-photo.png" onclick="openModal();currentSlide(5)" class="hover-shadow" alt="Flex">
+            <p class="titles">
+              <span class="bold">Flex</span> | Madison, Wisconsin | 7/24/2015
+            </p>
+          </div>
+
+          <!--Img 6 -->
+          <div class="photo">
+            <img src="img/magic-photo.png" onclick="openModal();currentSlide(6)" class="hover-shadow" alt="Black Girl Magic">
+            <p class="titles">
+              <span class="bold">Black Girl Magic</span> | Houston, Texas | 1/17/2016
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Modal / Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <!-- Slide 1 -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img src="img/moment.jpg" style="width:100%">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="img/father.jpg" style="width:100%">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="img/flag.jpg" style="width:100%">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img src="img/haircut.jpg" style="width:100%">
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <img src="img/flex.jpg" style="width:100%">
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="img/magic.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/Previous Controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail Image Controls -->
+
+            <!-- Thumbnail 1-->
+            <div class="thumb">
+              <img class="demo" src="img/moment-photo.png" onclick="currentSlide(1)"
+              alt="Moment | FemRock Fest - Austin, Texas | 7/17/2018">
+            </div>
+
+            <!-- Thumbnail 2-->
+            <div class="thumb">
+              <img class="demo" src="img/father-photo.png" onclick="currentSlide(2)"
+              alt="Father | Denver, Colorado | 6/25/2018">
+            </div>
+
+            <!-- Thumbnail 3-->
+            <div class="thumb">
+              <img class="demo" src="img/flag-photo.png" onclick="currentSlide(3)"
+              alt="Flag | LGBTQIA March - Washington DC | 11/12/2017">
+            </div>
+
+            <!-- Thumbnail 4-->
+            <div class="thumb">
+              <img class="demo" src="img/haircut-photo.png" onclick="currentSlide(4)"
+              alt="Haircut | NYC | 3/31/2018">
+            </div>
+
+            <!-- Thumbnail 5-->
+            <div class="thumb">
+              <img class="demo" src="img/flex-photo.png" onclick="currentSlide(5)"
+              alt="Flex | Madison, Wisconsin | 7/24/2015">
+            </div>
+
+            <!-- Thumbnail 6-->
+            <div class="thumb">
+              <img class="demo" src="img/magic-photo.png" onclick="currentSlide(6)"
+              alt="Black Girl Magic | Houston, Texas | 1/17/2016">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <footer>
+    <div class="content-wrapper">
+      <div class="contact">
+        <figure class="logo">
+          <a href="#">
+            <img src="img/dorothy-logo.png" alt="Dorothy DeLong logo">
+          </a>
+        </figure>
+        <address class="contact-info">
+          <a id="contact" href="mailto:webmaster@example.com">dorothydelong@gmail.com</a>
+          <p>503-123-4444</p>
+        </address>
+      </div>
+        <div class="social-icons">
+          <p>
+            <a href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </p>
+          <p>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          </p>
+        </div>
+        <p>Dorothy DeLong | Copyright 2019</p>
+      </div>
+  </footer>
+  <!-- End of Site Content -->
+  <script src="../js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script src="../js/dorothy-main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

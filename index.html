@@ -10,14 +10,25 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fonts Hosted -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800' rel='stylesheet' type='text/css'>
+
+  <!-- HOSTED jQuery Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 
   <!-- Loading icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- FontAwesome CDN version 5.5 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- LOCAL JS Script-->
+  <script src="js/modal.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -28,16 +39,41 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
+
+<div class="overflow-wrap">
+
+<!-- Work Carousel Gallery -->
+<div class="modal-wrap flex">
+  <div class="mask"></div>
+  <div class="modal" id="modal">
+    <div class="carousel-wrap">
+      <div class="window">
+        <div id="carousel">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+        <i class="fas fa-chevron-left" id="prev"></i>
+        <i class="fas fa-chevron-right" id="next"></i>
+      </div>
+    </div>
+    <div class="info-box">
+      <div class="title"></div>
+      <div class="tag"></div>
+      <div class="detail"></div>
+      <a href="#" target="_blank"><div class="button"><i class="fas fa-external-link-alt"></i>VIEW SITE</div></a>
+    </div>
+    <i class="close fas fa-times"></i>
+  </div>
+</div>
 <!-- Home -->
   <header id="home">
     <section class="hero-area">
-
-      <h1>Hey there, I'm <span>Stephanie</span>. I'm a Web Designer &amp; Developer.</h1>
-
       <a id="home-section">
-        <input type="button" value="View my work">
-      </a>
+        <h1>Hey there, I'm <span>Stephanie</span>. I'm a Web Designer &amp; Developer.</h1>
 
+        <div class="hero-area-button" ><a href="#work-section">View my work <i class="fas fa-arrow-right"></i></a></div>
+      </a>
     </section>
   </header>
 
@@ -80,9 +116,9 @@
         <!-- Intuitive -->
           <article>
             <p class="fontawesome-icon">
+              <i class="fas fa-lightbulb"></i>
             </p>
             <h3>Intuitive</h3>
-              <i class="far fa-lightbulb"></i>
             <p>
               Strive to deliver easy to use and intuitive UX / UI.
             </p>
@@ -151,93 +187,88 @@
       </div>
     </section>
 
-  <!-- Work -->
-    <section id="work">
-      <div class="content-wrapper">
-        <a id="work-section">
-          <h2>Work</h2>
-        </a>
+    <!-- PORTFOLIO -->
 
-      <!-- Work Gallery to be used to open the lightbox -->
-      <div class="work-gallery">
-        <div class="gallery-row">
-          <div class="gallery-column">
-            <img src="img/rogue-pickings-thumb.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-          </div>
-          <div class="gallery-column">
-            <img src="img/unplugged-thumb.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
-          </div>
-          <div class="gallery-column">
-            <img src="img/dorothy-thumb.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
-          </div>
-          <div class="gallery-column">
-            <img src="img/accelerate-thumb.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
-          </div>
-          <div class="gallery-column">
-            <img src="img/whole-bean-thumb.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    <section id="portfolio">
+      <a id="work-section"><div><h2>Work</h2></div></a>
+      <div id="gallery" class="flex">
+
+        <div class="mix" data-my-order="1">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Election Map</div>
+              <span class="highlight">Javascript</span>
+              <div class="button" id="rogue">LEARN MORE</div>
+            </div>
+
           </div>
         </div>
-      </div>
-      <!-- The Modal/Lightbox -->
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
 
-          <div class="mySlides">
-            <div class="numbertext">1 / 5</div>
-            <img src="img/rogue-pickings-full.png" style="width:100%">
-            <div class="text">
-              <div class="bold">Rogue Pickings</div>
-              <span class="highlight">Static HTML & CSS</span>
+        <div class="mix" data-my-order="1">
+          <div>
+            <div class="card"></div>
+              <div class="text">
+                <div class="bold">Unplugged</div>
+                <span class="highlight">Responsive Web Design</span>
+                <div class="button" id="unplugged">LEARN MORE</div>
+              </div>
             </div>
-            <div class="learn-button" id="rogue">LEARN MORE</div>
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">2 / 5</div>
-            <img src="img/unplugged-full.png" style="width:100%">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">3 / 5</div>
-            <img src="img/dorothy-full.png" style="width:100%">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">4 / 5</div>
-            <img src="img/accelerate-full.png" style="width:100%">
-          </div>
-          <div class="mySlides">
-            <div class="numbertext">5 / 5</div>
-            <img src="img/whole-bean-full.png" style="width:100%">
           </div>
 
-          <!-- Next/Previous Controls -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="mix" data-my-order="1">
+          <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Accelerate</div>
+                <span class="highlight">Customized WordPress Theme</span>
+                <div class="button" id="accelerate">LEARN MORE</div>
+              </div>
+            </div>
+        </div>
 
-          <!-- Caption Text -->
-          <div class="caption-container">
-            <p id="caption"></p>
+        <div class="mix" data-my-order="1">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">Dorothy DeLong</div>
+              <span class="highlight">Responsive Web Design</span>
+              <div class="button" id="dorothy">LEARN MORE</div>
+            </div>
           </div>
+        </div>
 
-          <!-- Thumbnail Image Controls -->
-          <div class="thumb-column">
-            <img class="demo" src="img/rogue-pickings-thumb.png" onclick="currentSlide(1)" alt="Rogue Pickings">
+        <div class="mix" data-my-order="1">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">The Whole Bean</div>
+              <span class="highlight">Responsive Web Design</span>
+              <div class="button" id="wholebean">LEARN MORE</div>
+            </div>
           </div>
-          <div class="thumb-column">
-            <img class="demo" src="img/unplugged-thumb.png" onclick="currentSlide(2)" alt="Unplugged">
-          </div>
-          <div class="thumb-column">
-            <img class="demo" src="img/dorothy-thumb.png" onclick="currentSlide(3)" alt="Dorthy DeLang Portfolio Site">
-          </div>
-          <div class="thumb-column">
-            <img class="demo" src="img/accelerate-thumb.png" onclick="currentSlide(4)" alt="Accelerate">
-          </div>
-          <div class="thumb-column">
-            <img class="demo" src="img/whole-bean-thumb.png" onclick="currentSlide(5)" alt="The Whole Bean">
-          </div>
+        </div>
+
+        <div class="mix" data-my-order="1">
+          <div>
+            <div class="card"></div>
+            <div class="text">
+              <div class="bold">WordPress Blog</div>
+              <span class="highlight">Customized Wordpress Theme</span>
+              <div class="button" id="wordpress">LEARN MORE</div>
+            </div>
+
+        </div>
+
+      </div>
+
     </section>
 
   <!-- Contact -->
     <section id="contact">
+      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+      <path d="M0 0 L50 100 L100 0 Z" fill="#F2F2F2" stroke="#F2F2F2"></path>
+    </svg>
       <div class="content-wrapper">
         <a id="contact-section">
           <h2>Contact</h2>
@@ -247,18 +278,15 @@
           <span>Have a question or want to work together?</span>
         </p>
 
-        <form>
+        <a href="mailto:hello@stephaniegmalek.com">hello@stephaniegmalek.com</a>
+
+        <!--<form>
           <input type="text" name="name" value="Name">
           <input type="email" name="email" value="Email">
           <textarea name="message" placeholder="Your message..."></textarea>
-          <input type="submit" value="Send">
-        </form>
+          <input type="submit" value="Submit">
+        </form>-->
 
-        <p>
-          <a href="#home-section">
-            <i class="fas fa-angle-double-up"></i>
-          </a>
-        </p>
 
       </div>
     </section>
@@ -267,6 +295,9 @@
 
   <footer>
     <div class="content-wrapper">
+      <a href="#home-section">
+        <i class="fas fa-angle-double-up"></i>
+      </a>
       <div class="social-icons">
         <p>
           <a href="https://www.linkedin.com/in/stephaniegmalek/" target="_blank">
@@ -296,6 +327,7 @@
     </div>
   </footer>
 
+</div>
 <!-- End Site Content -->
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
